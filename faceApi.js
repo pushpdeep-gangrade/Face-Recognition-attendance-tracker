@@ -24,7 +24,7 @@ const swaggerOptions ={
       "url": "https://github.com/pushpdeep-gangrade",
       "email": "pgangrad@uncc.edu"
     },
-    "servers" : ["http://localhost:8080/"]
+    "servers" : ["http://167.172.244.188:8080/"]
   }
 },
     apis: ["faceApi.js"]
@@ -179,6 +179,9 @@ app.put('/group/:groupId', async (req, res) => {
     if(body == ""){
       res.send("Group added Successfully");
     }
+	else{
+	res.send(body);
+}
   });
 });
 
@@ -217,6 +220,9 @@ app.delete('/group/:groupId', async (req, res) => {
     if(body == ""){
       res.send("Group deleted Successfully");
     }
+ else{
+        res.send(body);
+}
   });
 });
 
